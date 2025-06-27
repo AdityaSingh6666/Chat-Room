@@ -1,4 +1,4 @@
-const socket = new io('ws://localhost:3500');
+const socket = new io('https://chat-room-m586.onrender.com/');
 
 const msgInput = document.querySelector('#message');   
 const nameInput = document.querySelector('#name');   
