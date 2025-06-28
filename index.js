@@ -115,7 +115,7 @@ function buildMessage(name,text) {
     return {
         name,
         text,
-        time: new Date().toISOString()
+        timestamp: new Date().toISOString()
     }
 }
 
