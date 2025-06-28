@@ -43,7 +43,14 @@ msgInput.addEventListener('keypress', () => {
 // Listen for messages
 socket.on("message", (data) => {
     activity.textContent = ""
-    const { name, text, time} = data;
+    const { name, text, timestamp} = data;
+
+    const time = new Date(timestamp).toLocaleTimeString([], {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+    });
+    
     const li = document.createElement('li')
     li.className= 'post'
     if (name === nameInput.value) li.className = 'post post--left'
